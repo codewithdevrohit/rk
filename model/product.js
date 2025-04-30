@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 const productSchema = new mongoose.Schema({
-    name:{
+    title:{
         type:String,
         required:true
     },
@@ -8,14 +8,9 @@ const productSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    category:{
+    url:{
         type:String,
-        required:true
-    },
-    createdAt:{
-        type:Date,
-        default:Date.now()
     }
 })
 
-module.exports = mongoose.model("myproduct",productSchema)
+module.exports = mongoose.model("produt",productSchema)
